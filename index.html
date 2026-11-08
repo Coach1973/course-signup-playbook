@@ -392,6 +392,11 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <div class="card hot"><div class="ic">☑️</div><h3>表單一定要有真的送出鈕</h3><p>有一頁做了勾選清單卻沒有送出鈕，教練勾了 35 項只能口述。任何要人填的東西，都要有送出鈕和成功畫面，交付前自己填一次、按一次。（2026-10-24）</p></div>
       <div class="card hot"><div class="ic">👀</div><h3>重要的東西放第一屏</h3><p>新功能放在頁面中段，教練沒滑到就等於沒看到。主要按鈕、倒數、新加的功能，打開網頁不用捲就要看得到。（2026-10-24）</p></div>
       <div class="card hot"><div class="ic">🔠</div><h3>字級從第一版就做到 20px</h3><p>表單提示字、頁尾、按鈕、時間軸小標最容易漏。不要等做完才放大，一開始就用 20px 當最小字，交付前用瀏覽器量電腦版和手機版。</p></div>
+      <div class="card hot"><div class="ic">🖼️</div><h3>EDM 一定要放圖，直式橫式都一樣</h3><p>ai-image1202 第一版 EDM 是純文字排版，一張圖都沒有，教練說「沒有圖片也叫 EDM？」。主視覺圖要放進 EDM；圖回填後 EDM 也要用新圖重做，不能只換網頁。</p></div>
+      <div class="card hot"><div class="ic">🙈</div><h3>人臉不能被蓋住：日期牌、深色漸層都不行</h3><p>網頁封面的「12.02 星期三 下午」日期牌壓在人物額頭和眼睛上；EDM 又用深色漸層把照片壓得烏漆麻黑。照片要明亮、原樣呈現，日期牌放在身體或空白區（手機版排到照片下方）。做完先自己看一眼臉有沒有被蓋，再交付。</p></div>
+      <div class="card hot"><div class="ic">📄</div><h3>EDM 成品一律輸出 JPG 或 PDF</h3><p>只給 webp 或 HTML，教練拿去轉傳、列印都不方便。直式、橫式各一張 JPG，要列印轉寄再給一份 PDF，放在 ZIP 的 edm/ 資料夾。</p></div>
+      <div class="card hot"><div class="ic">🧑‍🏫</div><h3>講師是大樹教練，就直接複製最近一頁的講師卡</h3><p>不要寫「講師資訊即將公布」。照最近做的網頁（例如婦女再就業頁的 #speakers）把大樹教練的照片、27 年／6,000+ 場／10 萬+ 人次、資歷條列複製過來，配色換成這一頁自己的。簡介裡跟這堂課無關的細節（例如「只用手機」）要拿掉。</p></div>
+      <div class="card hot"><div class="ic">📮</div><h3>報名表單常是假送出，上架後要接到後台</h3><p>TAVA 做的報名頁常只是「按送出就跳成功畫面」，資料根本沒進後台。上架後要確認表單真的送進報名系統、活動資料列已建好，實測一筆再把測試資料清掉。</p></div>
       <div class="card hot"><div class="ic">🎨</div><h3>一張圖都不准自己出</h3><p>曾有 AI 收到「把圖做出來」就自己畫了很多張，額外扣了很多點數。生圖一律只寫出圖清單，交給小龍蝦用 LK888 出；位置寫成 data-slot 編號，圖出好可以直接換進線上網頁。</p></div>
       <div class="card"><div class="ic">🕐</div><h3>時間一律寫具體</h3><p>寫「14:00–16:30」，不寫「下午場」「晚上」。日期後面的星期幾要核對過，倒數計時也要用同一個時間。</p></div>
       <div class="card"><div class="ic">💌</div><h3>好轉傳比好看重要</h3><p>報名多半是朋友轉傳來的。直式海報給 LINE、橫式給 FB，加一句可以直接貼的文案，比再多一個特效有用。</p></div>
@@ -446,6 +451,10 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <li>不捲動、直接打開時每個區塊都看得到文字和圖，沒有大片空白</li>
       <li>漸層、照片上的字對比夠，深底淺字、淺底深字</li>
       <li>body 沒有 overflow-x:hidden，固定頂部列往下捲仍在</li>
+      <li>人物照片上的臉完整看得到：沒有日期牌、倒數、文字、色塊或深色漸層壓在臉上（電腦版、手機版都看過）</li>
+      <li>如果有 EDM：直式、橫式都放了圖，輸出成 JPG 或 PDF，自己打開看過有圖、臉沒被蓋、地點日期是最新的</li>
+      <li>講師區不是「即將公布」：講師是大樹教練就複製最近一頁的講師卡，資料與照片都放上去了</li>
+      <li>報名表單送出後，資料真的進了報名系統（實測一筆、清掉測試資料），不是只跳成功畫面</li>
       <li>每張圖都壓成長邊 1000px、webp 品質約 72，放在 images/ 用相對路徑</li>
       <li>沒有任何一張圖是 AI 自己生成的；出圖清單 prompts.html＋images.json 都在 ZIP 裡，總共 N 張等於實際筆數</li>
       <li>每個出圖位置都寫成 &lt;img data-slot="IMG-編號"&gt;，編號跟清單一致，沒有「待換圖」字卡</li>
