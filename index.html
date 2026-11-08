@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課程推廣報名網頁｜開工指令與製作經驗</title>
+<meta name="description" content="大樹教練做課程推廣、活動報名網頁的開工指令、技法庫與製作經驗。丟一次指令，一次拿到網頁、出圖清單和 ZIP。">
+<meta property="og:title" content="課程推廣報名網頁｜開工指令與製作經驗">
+<meta property="og:description" content="丟一次指令，一次拿到網頁、出圖清單和 ZIP。附 17 個大樹教練做過的課程報名網頁回顧。">
+<meta property="og:image" content="https://coach1973.github.io/course-signup-playbook/img/a-to-b.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F1; --card:#FFFFFF; --ink:#1F2A2E; --ink-2:#55606A; --line:#EADFD0;
+  --coral:#D9482F; --coral-2:#F26B4F; --coral-soft:#FDEBE5; --teal:#0F5257; --teal-2:#1C7A80; --teal-soft:#E3F1F1; --gold:#E9A23B; --leaf:#2F8A55;
+  --sans:"Noto Sans TC","PingFang TC",sans-serif; --serif:"Noto Serif TC","Songti TC",serif;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 22px/1.8 var(--sans)}
+a{color:var(--teal-2)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+code{font-size:20px;background:var(--teal-soft);padding:1px 8px;border-radius:6px}
+
+/* 頂部導覽 */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+.topnav .wrap{display:flex;align-items:center;gap:16px;min-height:68px}
+.topnav .brand{font-weight:900;font-size:22px;color:var(--teal);text-decoration:none;white-space:nowrap}
+.topnav nav{display:flex;gap:6px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.topnav nav::-webkit-scrollbar{display:none}
+.topnav nav a{font-size:20px;color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.topnav nav a:hover{background:var(--coral-soft);color:var(--coral)}
+@media (max-width:900px){.topnav .brand{display:none}.topnav nav{margin-left:0}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:80px 0 64px;background:
+  radial-gradient(circle at 92% 0%, rgba(242,107,79,.22) 0 260px, transparent 261px),
+  radial-gradient(circle at 4% 100%, rgba(28,122,128,.16) 0 220px, transparent 221px),
+  linear-gradient(180deg,#FFF3EA,var(--bg))}
+.tag{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--coral);color:var(--coral);font-weight:700;font-size:20px;padding:6px 16px;border-radius:999px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(44px,6vw,78px);line-height:1.15;margin:24px 0 18px;max-width:15em}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero p{max-width:42em;color:var(--ink-2);margin:0}
+.gets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.gets div{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:22px 24px}
+.gets .ic{font-size:36px;line-height:1}
+.gets strong{display:block;font-size:24px;margin-top:8px}
+.gets span{color:var(--ink-2);font-size:20px}
+.steps{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px;font-size:21px}
+.steps b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;font-size:20px;margin-right:8px}
+@media (max-width:820px){.gets{grid-template-columns:1fr}}
+
+section{padding:72px 0}
+section.alt{background:#F4EEE4}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,4vw,48px);line-height:1.25;margin:0 0 12px}
+.lead{color:var(--ink-2);margin:0 0 30px;max-width:46em}
+.kicker{font-weight:700;color:var(--coral);font-size:20px;letter-spacing:.06em}
+
+/* prompt boxes */
+.prompt{background:var(--card);border:2px solid var(--coral-2);border-radius:var(--r);box-shadow:0 10px 30px rgba(217,72,47,.08);overflow:hidden;margin-bottom:28px}
+.prompt header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--coral-soft);padding:16px 24px;border-bottom:2px solid var(--line)}
+.prompt header strong{font-size:24px}
+.prompt header span{font-size:20px;color:var(--ink-2)}
+.copy{font:700 20px var(--sans);background:var(--coral);color:#fff;border:0;border-radius:12px;padding:12px 22px;cursor:pointer;min-height:52px;white-space:nowrap}
+.copy:hover{background:#B93A24}
+.copy.done{background:var(--leaf)}
+pre{margin:0;padding:24px 26px;white-space:pre-wrap;word-break:break-word;font:400 21px/1.85 var(--sans);color:var(--ink)}
+pre .fill{background:#FFE3B0;border-radius:6px;padding:0 6px;font-weight:700}
+details.more{margin:-12px 0 28px}
+details.more summary{cursor:pointer;font-weight:700;color:var(--teal);font-size:21px}
+
+/* 三合一說明 */
+.merge{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.merge a{display:block;background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:22px 24px;text-decoration:none;color:var(--ink)}
+.merge a:hover{border-color:var(--teal-2)}
+.merge b{display:block;font-size:24px;color:var(--teal)}
+.merge span{font-size:20px;color:var(--ink-2)}
+@media (max-width:820px){.merge{grid-template-columns:1fr}}
+
+/* sections table */
+.secs{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.secs li{counter-increment:s;display:grid;grid-template-columns:64px 230px 1fr;gap:18px;align-items:start;background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:20px 24px}
+.secs li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--teal);font-weight:900;font-size:24px;color:#fff}
+.secs b{font-size:24px;padding-top:8px}
+.secs span{color:var(--ink-2);font-size:21px;padding-top:8px}
+.secs em{font-style:normal;font-size:20px;color:var(--coral);font-weight:700}
+@media (max-width:820px){.secs li{grid-template-columns:52px 1fr}.secs span{grid-column:1/-1;padding-top:0}}
+
+/* 技法卡 */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.card .ic{font-size:34px;line-height:1}
+.card h3{font-size:25px;margin:10px 0 8px;line-height:1.4}
+.card h3 .no{display:inline-grid;place-items:center;min-width:44px;height:44px;border-radius:12px;background:var(--coral);color:#fff;font-size:22px;margin-right:10px;padding:0 8px;vertical-align:middle}
+.card h3 .no.t{background:var(--teal)}
+.card p,.card li{color:var(--ink-2);font-size:21px}
+.card p{margin:0}
+.card .fit{display:block;font-size:20px;color:var(--teal);font-weight:700;margin-bottom:6px}
+.card .src{display:block;margin-top:10px;font-size:20px}
+.card ul{margin:8px 0 0;padding-left:1.2em}
+.card.hot{border-color:var(--coral-2);background:#FFF6F2}
+.card.hot h3::after{content:"踩過的坑";margin-left:10px;font-size:20px;font-weight:700;color:#fff;background:var(--coral);padding:2px 10px;border-radius:999px;vertical-align:middle}
+@media (max-width:980px){.grid.three{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:820px){.grid,.grid.three{grid-template-columns:1fr}}
+
+/* 作品回顧 */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work{display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .2s,border-color .2s}
+.work:hover{transform:translateY(-4px);border-color:var(--coral-2)}
+.work img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#eee}
+.work div{padding:16px 20px 20px}
+.work strong{display:block;font-size:23px;line-height:1.4}
+.work span{display:block;font-size:20px;color:var(--ink-2);margin-top:6px}
+.work i{display:inline-block;font-style:normal;font-size:20px;color:var(--teal);font-weight:700;margin-top:8px}
+@media (max-width:980px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.gallery{grid-template-columns:1fr}}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;background:#fff;border:2px solid var(--line);border-radius:var(--r)}
+.check li{display:flex;gap:16px;padding:18px 24px;border-bottom:2px dashed var(--line)}
+.check li:last-child{border-bottom:0}
+.check li::before{content:"✓";flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--leaf);color:#fff;font-weight:900;font-size:20px;margin-top:4px}
+
+.note{background:var(--teal-soft);border-left:6px solid var(--teal-2);border-radius:12px;padding:18px 24px;font-size:21px;color:#123b3e;margin-top:24px}
+
+/* 附錄 */
+details.spec{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:20px 26px}
+details.spec summary{cursor:pointer;font-weight:700;font-size:23px;color:var(--teal)}
+details.spec h4{font-size:23px;margin:24px 0 6px}
+details.spec p,details.spec li{font-size:21px;color:var(--ink-2)}
+
+/* footer */
+footer{background:var(--teal);color:#E6F2F2;padding:48px 0 56px;margin-top:40px}
+footer .links{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;font-size:21px}
+footer a{color:#FFD7A8;font-weight:700;text-decoration:none;border-bottom:2px solid rgba(255,215,168,.45)}
+footer a:hover{border-bottom-color:#FFD7A8}
+footer small{display:block;text-align:center;margin-top:18px;font-size:20px;color:#BFD9DA}
+</style>
+</head>
+<body>
+
+<div class="topnav"><div class="wrap">
+  <a class="brand" href="#top">課程推廣報名網頁</a>
+  <nav aria-label="本頁導覽">
+    <a href="#prompt">開工指令</a><a href="#sections">網頁架構</a><a href="#moves">技法庫</a><a href="#lessons">製作經驗</a><a href="#works">作品回顧</a><a href="#checklist">交付檢查</a>
+  </nav>
+</div></div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="tag">📣 做課程、活動報名頁之前，先看這一頁</span>
+    <h1>課程推廣報名網頁<br><em>開工指令與製作經驗</em></h1>
+    <p>整理自大樹教練近期做過的 17 個課程與活動報名網頁，加上「反向操作技能書」的特效招式和「出圖指令表一鍵注入」的出圖規則，三份合成一份。以後要做任何一堂課、一場活動的報名網頁，複製下面的開工指令、填上這次的課程資料就好。</p>
+    <div class="gets" aria-label="丟一次指令會拿到的東西">
+      <div><div class="ic">🌐</div><strong>一頁完整報名網頁</strong><span>電腦、手機都檢查過，最小字 20px，頁尾固定四個連結</span></div>
+      <div><div class="ic">🖼️</div><strong>一份出圖清單</strong><span>每張圖一條英文指令＋JSON，直接交給小龍蝦用 LK888 出圖</span></div>
+      <div><div class="ic">📦</div><strong>一個 ZIP 下載包</strong><span>根目錄就是 index.html，解壓驗證過，可直接上架</span></div>
+    </div>
+    <div class="steps">
+      <span><b>1</b>複製開工指令</span><span><b>2</b>填上黃色欄位</span><span><b>3</b>連同這頁網址貼給 TAVA</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="prompt">
+  <div class="wrap">
+    <div class="kicker">STEP 1 · 開工指令</div>
+    <h2>複製這段，填好就能開工</h2>
+    <p class="lead">黃底的部分換成這次的課程資料。網頁、出圖清單、ZIP 三樣東西都寫在指令裡了，不用另外提醒。</p>
+
+    <article class="prompt">
+      <header><div><strong>完整版開工指令</strong><br><span>第一次用、或這堂課有特別需求時用這版</span></div><button class="copy" type="button" data-target="p1">複製指令</button></header>
+<pre id="p1">我要做一頁「課程推廣報名網頁」。請照這一頁的流程和規格做：https://coach1973.github.io/course-signup-playbook/
+這一次要一次交付三樣東西：①完整網頁 ②出圖清單（含 JSON）③ZIP 下載包。
+
+【課程基本資料】
+・課程名稱：<span class="fill">【例如：女性個人 IP 打造 × AI 製作網頁和主題曲】</span>
+・一句話主張：<span class="fill">【例如：早上找到你是誰，下午把你做出來】</span>
+・給誰上：<span class="fill">【例如：離開職場半年以上、想重新出發的姊妹】</span>
+・日期與時間：<span class="fill">【例如：12/30（三）09:00–18:00，一律寫具體時間，不寫「下午場」】</span>
+・地點：<span class="fill">【場地名稱＋完整地址；線上課寫平台】</span>
+・費用：<span class="fill">【原價／早鳥價／早鳥截止日；免費就寫免費；有政府補助也寫】</span>
+・名額：<span class="fill">【例如：30 人，額滿為止】</span>
+・講師：<span class="fill">【姓名、頭銜、照片、個人網頁或社群連結】</span>
+・主辦／協辦：<span class="fill">【單位名稱與連結，沒有就寫「無」】</span>
+・報名後要做的事：<span class="fill">【例如：匯款帳號、加入 LINE 群（附連結）、上課要帶手機】</span>
+・我有的素材：<span class="fill">【講師照、上一場照片、影片、海報、學員心得…有幾個附幾個，沒有就寫「無」】</span>
+・參考連結：<span class="fill">【主辦官網、上一場網頁、報導…】</span>
+
+【風格】<span class="fill">【例如：陽光溫暖／深色質感／優雅沙龍；沒有就寫「照課程調性自選」】</span>
+【想用的特效】<span class="fill">【從這一頁技法庫點名，例如「A 互動闖關＋第 9 招滾輪數字」；沒有就寫「你挑 2～3 招最適合的」】</span>
+
+【網頁要有這些區塊】（依序，內容依課程調整，用不到的可以省略並說明）
+1. 固定頂部列：課程名＋「立即報名」按鈕一直看得到；手機收成漢堡選單，報名按鈕放在選單最下面
+2. 開場主視覺：課程名、一句話主張、日期時間、地點、費用、兩顆按鈕（立即報名／看課程內容）、倒數計時
+3. 痛點共鳴：「你是不是也……」三到六張卡，讓對象看到自己
+4. 你會帶走什麼：具體成果，能用數字就用數字
+5. 課程流程：時間軸，一段一段寫清楚幾點做什麼
+6. 講師介紹：照片、頭銜、三個亮點、連到講師個人網頁
+7. 上一場花絮與學員心得：有素材才做，沒有就省略，不要捏造
+8. 場次與票價：早鳥、原價、名額、截止日；多場次用卡片並排讓人選
+9. 地點與交通：地址、Google 地圖連結、停車或大眾運輸
+10. 常見問題：可展開收合，至少五題
+11. 轉傳區：一張直式、一張橫式海報（走出圖清單），加上分享按鈕和一句好轉傳的文案
+12. 報名表單：姓名、手機、Email、場次（多場才放）、同行人數、從哪裡知道這堂課、備註；送出後顯示成功畫面和下一步（匯款資訊、LINE 群）
+13. 固定頁尾
+
+【報名表單規則】
+・表單寫成 &lt;form data-works-form="這次的網址代號"&gt;，欄位用一般的 name 屬性，送出鈕是真的 submit 按鈕
+・不要自己寫送到別的伺服器的程式，也不要寫死任何 API 網址或金鑰；上架到 event.bymyway.com 時，系統會自動接上「送出就通知」
+・送出成功畫面、必填檢查、手機號碼格式檢查要做好；電腦和手機都要真的按一次送出，看到成功畫面
+
+【字級】全頁最小的字不能低於 20px，包括手機版、導覽、按鈕、表單欄位、提示文字、圖說、頁尾。以瀏覽器實際算出來的字級為準，不是只看 CSS
+
+【網頁底部固定要加】
+1. 本網頁由 TAVA AI 製作（連結：https://www.tava-ai.com/）
+2. 出品人 大樹教練（連結：https://www.bymyway.com/）
+3. 友善連結 榮樹下（連結：https://event.bymyway.com/curated/rongtree/）
+4. 顧問師天團・人才軍火庫（連結：https://event.bymyway.com/curated/skyteam/）
+
+【配圖規則】（最高優先：這個對話裡，你一張圖都不准自己出）
+・有真實照片的位置，一律用我給的真實照片
+・沒有照片、需要插畫、情境圖、海報的位置，不要自己畫。你只要把網頁做好，並在每個需要圖的位置寫一條出圖指令，整理成「出圖清單」；圖由我交給小龍蝦用 LK888 出
+・任何情況下，都不准使用你內建或平台附帶的生圖功能，也不准找替代管道、委派其他工具代畫，連「先畫一張試試看」都不行。我說「把圖做出來」「全部都畫」，意思是替每張圖寫好指令，不是叫你畫
+・不需要、也不要向我要任何 LK888 金鑰
+・出圖清單每張圖要有：ID（IMG-001 起，不跳號）、對應網頁哪個區塊、類型（實景修飾／概念／圖解背景）、比例（16:9、4:3、4:5、1:1 擇一）、參考照片檔名（沒有就寫「無」）、英文指令（一整段、自成一體、圖裡不放文字、數字、浮水印、商標）、一句中文說明。清單開頭寫「總共 N 張」，N 等於實際筆數
+・出圖清單做成 ZIP 裡的 prompts.html：每條可以單獨複製、整份可以一鍵複製；最後把整份 JSON 陣列（欄位 id、file、section、type、ratio、ref、prompt、caption、alt）原樣放在一個 &lt;pre&gt; 裡，另存一份 images.json
+・海報上的課程名、日期、價格不要叫生圖畫字：生成圖只當背景，字由網頁排版疊上去
+・網頁裡每一個要等出圖的位置，一律寫成 &lt;img data-slot="IMG-001" src="（暫時圖）" alt="（一句話描述）"&gt;：編號跟出圖清單一致，一個位置一個編號。暫時圖放真實照片或清楚標示的示意圖（不留灰色空框），不要另外加「待換圖」字卡。圖出好之後，我會用工具照編號直接換進已上架的網頁
+・做完網頁和清單就停下來，不用等圖傳回來
+・回報時要說實話：沒有實際查過，不准說「沒有扣點」或「免費」；萬一已經出了圖，馬上告訴我出了幾張
+
+【製作規則】
+・文字和圖片一打開就全部顯示，不要做「捲動到才出現」才看得到的內容；捲動特效只能加分，不能是唯一的顯示方式
+・圖片用一般的 &lt;img src&gt;，不要寫「先藏起來、載完才插進畫面」的載圖程式
+・body 不要加 overflow-x:hidden（會讓固定頂部列失效），要防止左右晃改用 overflow-x:clip 或修好太寬的元素
+・漸層或照片上的字要夠清楚：深底配淺字、淺底配深字，對比不夠就加一層半透明底
+・倒數計時要處理「活動已開始／已結束」的狀態，不能倒數成負數；日期要配對正確的星期幾
+・新功能、主要按鈕要在第一屏就看得到，不要藏在最底下
+・每個區塊都要有圖，不要整段只有文字
+
+【交付方式】
+・每張圖放進網頁前先壓縮：長邊 1000px、webp 品質約 72（單張約 100KB 上下）；圖片放在 images/ 資料夾，用相對路徑
+・完成後打包成 ZIP 讓我下載（含網頁、prompts.html、images.json、圖片、我給的原始照片）
+・【ZIP 上架規則｜強制】
+  - 首頁檔名必須是全小寫的 index.html，直接放在 ZIP 根目錄，不得多包一層專案資料夾
+  - index.html 必須是完整網頁內容，不得是空白頁、轉址頁或指向製作環境的連結
+  - 網站可直接放上靜態主機，不需安裝套件、不需建置、不需後端
+  - ZIP 裡不得有帳密、金鑰、登入設定、隱藏的執行目錄或其他私人資料
+・【驗證對象是最後交付的 ZIP】打包後先列出 ZIP 內容，再解壓到全新資料夾，用瀏覽器開啟解壓出來的首頁，檢查電腦版與手機版的圖片、導覽、倒數、表單送出、FAQ 展開、分享按鈕，沒有破圖、缺資源或程式錯誤。任何一項沒過，修好、重新打包、重新驗證，才能交付
+・交付時要分清楚「已通過本地解壓與瀏覽器驗證」和「已成功上架」；沒拿到上架成功的結果，不准說上架成功
+・查不到或互相矛盾的資料（日期、價格、地址、講師頭銜），不要自己猜，最後列出來給我確認
+・最後一段只寫三件事：網頁在哪、出圖清單在哪、ZIP 在哪，再加上要我另外交給小龍蝦的參考照片</pre>
+    </article>
+
+    <article class="prompt">
+      <header><div><strong>精簡版開工指令</strong><br><span>規格不變時用這版，只要給課程資料</span></div><button class="copy" type="button" data-target="p2">複製指令</button></header>
+<pre id="p2">請照「課程推廣報名網頁」的固定流程（https://coach1973.github.io/course-signup-playbook/），幫我做<span class="fill">【課程名稱】</span>的報名網頁，網頁、出圖清單、ZIP 一次交付。
+
+・一句話主張：<span class="fill">【一句話】</span>
+・日期時間／地點：<span class="fill">【具體時間＋完整地址】</span>
+・費用／名額：<span class="fill">【原價、早鳥、名額】</span>
+・講師：<span class="fill">【姓名、頭銜、連結】</span>
+・報名後要做的事：<span class="fill">【匯款、LINE 群…沒有就寫「無」】</span>
+・素材：<span class="fill">【有附就用，沒有就寫「無」】</span>
+・想用的特效：<span class="fill">【技法庫點名，或寫「你挑」】</span>
+・這次的特別需求：<span class="fill">【沒有就寫「無」】</span>
+・規格照技能書：最小字 20px；頁尾四個連結；一張圖都不准自己出，只寫出圖清單（prompts.html＋JSON），出圖位置寫成 &lt;img data-slot="IMG-編號"&gt;；表單寫成 &lt;form data-works-form="網址代號"&gt;；ZIP 根目錄是全小寫 index.html，交付前解壓驗證過。</pre>
+    </article>
+
+    <article class="prompt">
+      <header><div><strong>圖片回填指令</strong><br><span>小龍蝦出好圖、而網頁還沒上架時用</span></div><button class="copy" type="button" data-target="p3">複製指令</button></header>
+<pre id="p3">圖片回填：附上的 ZIP 是照出圖清單出好的圖，檔名就是 IMG 編號。
+請照「課程推廣報名網頁」技能書（https://coach1973.github.io/course-signup-playbook/）的回填規則：
+・先列出收到幾張、格式、尺寸，逐張看過，依 IMG 編號對回網頁的 data-slot 位置
+・壓成長邊 1000px、webp 品質約 72 再放進 images/
+・缺圖、多圖或對不上的，列出來問我，不要猜
+・回填後重新打包 ZIP，解壓驗證電腦版、手機版每張圖都看得到，再交付新版本（舊版不覆蓋）</pre>
+    </article>
+    <p class="note">💡 網頁已經上架的話，不用回填這一步：把出圖清單網址交給小龍蝦，圖出好會照 IMG 編號直接換進線上網頁。</p>
+  </div>
+</section>
+
+<section class="alt" id="merge">
+  <div class="wrap">
+    <div class="kicker">三頁合一</div>
+    <h2>這一頁整合了三份技能</h2>
+    <p class="lead">原本要分三次貼的東西，現在一份開工指令全包。原頁面還在，需要細節時點進去看。</p>
+    <div class="merge">
+      <a href="https://coach1973.github.io/ai-go/biz-web-inject.html" target="_blank" rel="noopener"><b>🖼️ 出圖指令表一鍵注入</b><span>「一張圖都不准自己出、只寫出圖清單」的規則，已經寫進開工指令的【配圖規則】。</span></a>
+      <a href="https://event.bymyway.com/curated/reverse-skill/" target="_blank" rel="noopener"><b>🔍 反向操作技能書</b><span>14 招特效已收進下方技法庫的第 1～14 招；想拆新網站時，照原頁的開工指令。</span></a>
+      <a href="https://event.bymyway.com/curated/rs-demo/" target="_blank" rel="noopener"><b>🎮 14 招示範頁</b><span>每一招都能直接玩。挑招式之前先去看一眼，再跟 AI 說「我要第幾招」。</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="sections">
+  <div class="wrap">
+    <div class="kicker">STEP 2 · 網頁架構</div>
+    <h2>一頁報名網頁的固定區塊</h2>
+    <p class="lead">從 17 個網站整理出的共同骨架。順序固定，內容依課程調整，每一格後面附上做得最好的那一頁。</p>
+    <ol class="secs">
+      <li><b>固定頂部列</b><span>課程名＋「立即報名」一直看得到，手機收成漢堡選單。<br><em>看範例：<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">女性個人 IP</a>、<a href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener">從 A 到 B</a> 的 A→B 進度列</em></span></li>
+      <li><b>開場主視覺</b><span>課名、一句話主張、日期時間地點價格、兩顆按鈕、倒數計時。<br><em>看範例：<a href="https://event.bymyway.com/curated/111-wei/" target="_blank" rel="noopener">有薇力 11/1</a>、<a href="https://event.bymyway.com/curated/champagne-salon/" target="_blank" rel="noopener">香檳下午茶</a></em></span></li>
+      <li><b>痛點共鳴</b><span>「你是不是也……」讓對象看到自己。<br><em>看範例：<a href="https://event.bymyway.com/curated/three-lacks/" target="_blank" rel="noopener">三缺計畫</a>、<a href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener">時間的秘密</a></em></span></li>
+      <li><b>你會帶走什麼</b><span>具體成果，能用數字就用數字。<br><em>看範例：<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">下課時你會有一張專輯</a></em></span></li>
+      <li><b>課程流程</b><span>時間軸，一段一段寫清楚幾點做什麼。<br><em>看範例：<a href="https://event.bymyway.com/curated/ema1017/" target="_blank" rel="noopener">10/17 一整天的安排</a></em></span></li>
+      <li><b>講師介紹</b><span>照片、頭銜、三個亮點、連到個人網頁；多位講師做成頭像牆，點了看簡介。<br><em>看範例：<a href="https://coach1973.github.io/ai-art/" target="_blank" rel="noopener">古典音樂遇到 AI</a></em></span></li>
+      <li><b>花絮與心得</b><span>上一場的照片、學員留下的話。沒有素材就省略，不捏造。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">10/3 那場留下了這些</a></em></span></li>
+      <li><b>場次與票價</b><span>早鳥、原價、名額、截止日；多場次、多方案用卡片並排。<br><em>看範例：<a href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener">傘繩 DIY 方案</a>、<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">高雄台南兩場</a></em></span></li>
+      <li><b>地點與交通</b><span>地址、地圖連結、停車或大眾運輸。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">11/7 台南見</a></em></span></li>
+      <li><b>常見問題</b><span>可展開收合，至少五題，先回答最常被問的錢、時間、要帶什麼。<br><em>看範例：<a href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener">婦女再就業補助</a></em></span></li>
+      <li><b>轉傳區</b><span>直式、橫式海報各一張，加上分享按鈕和一句好轉傳的文案。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">這兩張海報直接轉給朋友</a></em></span></li>
+      <li><b>報名表單</b><span>姓名、手機、Email、場次、人數、從哪裡知道、備註；送出後顯示下一步。<br><em>看範例：<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">留下資料，剩下的交給我們</a></em></span></li>
+      <li><b>固定頁尾</b><span>本網頁由 TAVA AI 製作、出品人 大樹教練、友善連結 榮樹下、顧問師天團・人才軍火庫。</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="moves">
+  <div class="wrap">
+    <div class="kicker">STEP 3 · 技法庫</div>
+    <h2>可以點名的招式</h2>
+    <p class="lead">A～Q 是從 17 個課程網頁整理出來、最適合報名頁的招式；1～14 是反向操作技能書拆出來的特效。開工時在【想用的特效】寫「我要 C 倒數＋第 9 招」就好。</p>
+
+    <h3 style="font-size:28px;margin:0 0 16px">🅰 課程報名頁招式（A～Q）</h3>
+    <div class="grid three">
+      <div class="card"><h3><span class="no">A</span>互動闖關＋進度列</h3><span class="fit">適合：說明會、招募、觀念型課程</span><p>整頁變成一關一關的遊戲，最上方固定 A→B 進度列，往下滑永遠知道自己走到哪。</p><a class="src" href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener">看「從 A 到 B」→</a></div>
+      <div class="card"><h3><span class="no">B</span>30 秒資格自測</h3><span class="fit">適合：補助、資格限制的課</span><p>回答 5 個是非題，馬上知道符不符合、能領多少，再引導去報名。</p><a class="src" href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener">看「婦女再就業補助」→</a></div>
+      <div class="card"><h3><span class="no">C</span>倒數計時</h3><span class="fit">適合：有截止日、開課日的活動</span><p>開場顯示距離開課或早鳥截止還有幾天幾時；時間到自動改成「進行中／已結束」。</p><a class="src" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener">看「時間的秘密」→</a></div>
+      <div class="card"><h3><span class="no">D</span>轉傳海報</h3><span class="fit">適合：要靠口碑擴散的課</span><p>直式給 LINE、橫式給 FB，一鍵下載或分享，旁邊附一句可以直接貼的轉傳文案。</p><a class="src" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">看「用手機就能玩 AI」→</a></div>
+      <div class="card"><h3><span class="no">E</span>匿名回饋牆</h3><span class="fit">適合：課中互動、課後收心得</span><p>不用舉手、不用寫名字，學員用手機送出一句話，大螢幕即時出現。</p><a class="src" href="https://event.bymyway.com/ccu/" target="_blank" rel="noopener">看「中正大學領導力」→</a></div>
+      <div class="card"><h3><span class="no">F</span>現場票選</h3><span class="fit">適合：講座開場、了解聽眾</span><p>聽眾點選自己卡在哪裡，票數即時長條圖，講師照票數調整內容。</p><a class="src" href="https://event.bymyway.com/curated/creator-survey/" target="_blank" rel="noopener">看「創作者卡關票選」→</a></div>
+      <div class="card"><h3><span class="no">G</span>點子收集牆</h3><span class="fit">適合：共創、工作坊</span><p>一分鐘丟一個點子，像種樹一樣長在牆上，每個點子都有適合它的路。</p><a class="src" href="https://event.bymyway.com/curated/idea-center/" target="_blank" rel="noopener">看「AI 好點子收集中心」→</a></div>
+      <div class="card"><h3><span class="no">H</span>邀請函卡</h3><span class="fit">適合：沙龍、高端小班、餐敘</span><p>做成一張精緻的實體邀請函樣式，日期、地點、服裝建議一次看完。</p><a class="src" href="https://event.bymyway.com/curated/champagne-salon/" target="_blank" rel="noopener">看「香檳下午茶沙龍」→</a></div>
+      <div class="card"><h3><span class="no">I</span>方案比較＋匯款資訊</h3><span class="fit">適合：有多種價格方案的課</span><p>方案卡並排比較，推薦的那張放大；報名區直接寫匯款帳號和後五碼回報方式。</p><a class="src" href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener">看「傘繩 DIY」→</a></div>
+      <div class="card"><h3><span class="no">J</span>自我評分表</h3><span class="fit">適合：工作坊、測驗型課程</span><p>學員自己打分，網頁算出結果和建議，讓人想知道「上完課會變怎樣」。</p><a class="src" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener">看「時間的秘密」→</a></div>
+      <div class="card"><h3><span class="no">K</span>課後回顧頁</h3><span class="fit">適合：活動結束後</span><p>同一頁改成回顧：當天影片、歌曲、照片、重點心法，讓學員帶回家再看一次。</p><a class="src" href="https://event.bymyway.com/curated/taipeiema1017/" target="_blank" rel="noopener">看「一支手機的魔法夜」→</a></div>
+      <div class="card"><h3><span class="no">L</span>生命故事長頁</h3><span class="fit">適合：分享會、新書、生命教育</span><p>用電影敘事的方式說主角的故事，一段一段帶到課程主題，最後才是報名。</p><a class="src" href="https://event.bymyway.com/curated/rebreathe/" target="_blank" rel="noopener">看「重新呼吸」→</a></div>
+      <div class="card"><h3><span class="no">M</span>加入行事曆</h3><span class="fit">適合：大會、說明會</span><p>一鍵把活動加進 Google 日曆或手機行事曆，降低忘記出席的人。</p><a class="src" href="https://event.bymyway.com/curated/111-wei/" target="_blank" rel="noopener">看「有薇力 11/1」→</a></div>
+      <div class="card"><h3><span class="no">N</span>深色質感背景</h3><span class="fit">適合：商務、高端計畫</span><p>深色底配會動的光點背景，可切換明暗模式，整頁有發表會的質感。</p><a class="src" href="https://event.bymyway.com/curated/three-lacks/" target="_blank" rel="noopener">看「三缺計畫」→</a></div>
+      <div class="card"><h3><span class="no">O</span>一天行程時間軸</h3><span class="fit">適合：整天的課、課後有餐敘</span><p>從報到到散場一格一格排好，吃什麼、在哪吃也寫進去，讓人覺得很值得。</p><a class="src" href="https://event.bymyway.com/curated/ema1017/" target="_blank" rel="noopener">看「零基礎學 AI 課」→</a></div>
+      <div class="card"><h3><span class="no">P</span>講師頭像牆</h3><span class="fit">適合：多位講師、演出陣容</span><p>頭像排成一排，點了跳出完整簡介，不會整頁都是講師介紹。</p><a class="src" href="https://coach1973.github.io/ai-art/" target="_blank" rel="noopener">看「古典音樂遇到 AI」→</a></div>
+      <div class="card"><h3><span class="no">Q</span>延伸內容牆</h3><span class="fit">適合：講師有 Podcast、影片</span><p>把講師的 Podcast、影片做成卡片牆，還沒報名的人先聽先看，建立信任。</p><a class="src" href="https://event.bymyway.com/curated/superpower/" target="_blank" rel="noopener">看「吸引人才的超能力」→</a></div>
+    </div>
+
+    <h3 style="font-size:28px;margin:48px 0 16px">🎬 反向技能書特效（1～14）<a href="https://event.bymyway.com/curated/rs-demo/" target="_blank" rel="noopener" style="font-size:21px;margin-left:12px">先去示範頁玩一玩 →</a></h3>
+    <div class="grid three">
+      <div class="card"><h3><span class="no t">1</span>捲軸控制影片</h3><p>往下捲，影片跟著播；適合產品或課程開場。</p></div>
+      <div class="card"><h3><span class="no t">2</span>影片每格都完整</h3><p>搭配第 1 招，來回捲才順；影片 5～8 秒。</p></div>
+      <div class="card"><h3><span class="no t">3</span>數字跳動</h3><p>學員人數、開課場次從 0 跳到目標值。</p></div>
+      <div class="card"><h3><span class="no t">4</span>亮點＋雷射說明卡</h3><p>教室照、作品照上放發光點，點了出現說明。</p></div>
+      <div class="card"><h3><span class="no t">5</span>簡報筆模式</h3><p>同一頁拿上台講，方向鍵一站一站捲。</p></div>
+      <div class="card"><h3><span class="no t">6</span>內容和版面分開</h3><p>換一堂課只換資料，版面不用重做。</p></div>
+      <div class="card"><h3><span class="no t">7</span>粒子波浪背景</h3><p>科技感開場，不需要任何套件。</p></div>
+      <div class="card"><h3><span class="no t">8</span>捲動縮框開場</h3><p>滿版畫面往下捲縮成圓角卡片。</p></div>
+      <div class="card"><h3><span class="no t">9</span>滾輪數字</h3><p>像里程表一位一位滾到目標，純 CSS。</p></div>
+      <div class="card"><h3><span class="no t">10</span>跑馬燈</h3><p>合作單位、媒體 Logo 永遠不斷地滑過。</p></div>
+      <div class="card"><h3><span class="no t">11</span>文字升起</h3><p>標題一句一句從下面升起。門檻要設 0。</p></div>
+      <div class="card"><h3><span class="no t">12</span>頁面簾幕轉場</h3><p>多頁網站切頁時，品牌色簾幕蓋上再升走。</p></div>
+      <div class="card"><h3><span class="no t">13</span>取景器開場</h3><p>2～3 秒的品牌開場動畫，可跳過。</p></div>
+      <div class="card"><h3><span class="no t">14</span>圖片清單防跳版</h3><p>圖多的頁面先用主色佔位，不會整頁往下跳。</p></div>
+    </div>
+    <p class="note">💡 每一招的實作數字（秒數、門檻、緩動曲線）都寫在<a href="https://event.bymyway.com/curated/reverse-skill/" target="_blank" rel="noopener">反向操作技能書</a>最下面的「給 AI 的完整技能說明」。開工指令已附上這一頁的網址，AI 需要時會自己去讀。</p>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="kicker">STEP 4 · 製作經驗</div>
+    <h2>做這 17 頁學到的事</h2>
+    <p class="lead">每一條都是真的改過、被教練糾正過才寫進來的。照這些原則做，可以少改好幾輪。</p>
+    <div class="grid">
+      <div class="card hot"><div class="ic">🧭</div><h3>進度列要固定在最上方</h3><p>「從 A 到 B」第一版把關卡地圖放在開場下面，往下滑就看不到了。教練要的是固定在最上方的 A→B 進度列：數字一關一關亮起，點 ☰ 才展開關卡名稱。導覽、進度、報名按鈕都要「一直看得到」。（2026-11-08）</p></div>
+      <div class="card hot"><div class="ic">⬜</div><h3>不要寫「載完才插進畫面」的載圖程式</h3><p>TAVA 做的網頁常把圖片先藏起來、等載完再插進畫面，結果離畫面遠的圖永遠不會載，整區空白。一律用一般的 &lt;img src&gt;，最多加 loading="lazy"，不要另外寫載圖程式。（2026-11-03、11-05 兩次）</p></div>
+      <div class="card hot"><div class="ic">📌</div><h3>body 加 overflow-x:hidden，固定頂部列就壞了</h3><p>為了防止手機左右晃，在 body 加了 overflow-x:hidden，固定頂部列就跟著滑掉。改用 overflow-x:clip，或直接找出太寬的元素修好。（2026-10-25 全站查過 84 頁）</p></div>
+      <div class="card hot"><div class="ic">🌓</div><h3>漸層和照片上的字要量對比</h3><p>深色區塊的字顏色連續改錯三次，因為漸層背景用程式量會漏掉。交付前要截圖量真實像素，看不清楚就加一層半透明底。（2026-11-01、11-04）</p></div>
+      <div class="card hot"><div class="ic">☑️</div><h3>表單一定要有真的送出鈕</h3><p>有一頁做了勾選清單卻沒有送出鈕，教練勾了 35 項只能口述。任何要人填的東西，都要有送出鈕和成功畫面，交付前自己填一次、按一次。（2026-10-24）</p></div>
+      <div class="card hot"><div class="ic">👀</div><h3>重要的東西放第一屏</h3><p>新功能放在頁面中段，教練沒滑到就等於沒看到。主要按鈕、倒數、新加的功能，打開網頁不用捲就要看得到。（2026-10-24）</p></div>
+      <div class="card hot"><div class="ic">🔠</div><h3>字級從第一版就做到 20px</h3><p>表單提示字、頁尾、按鈕、時間軸小標最容易漏。不要等做完才放大，一開始就用 20px 當最小字，交付前用瀏覽器量電腦版和手機版。</p></div>
+      <div class="card hot"><div class="ic">🎨</div><h3>一張圖都不准自己出</h3><p>曾有 AI 收到「把圖做出來」就自己畫了很多張，額外扣了很多點數。生圖一律只寫出圖清單，交給小龍蝦用 LK888 出；位置寫成 data-slot 編號，圖出好可以直接換進線上網頁。</p></div>
+      <div class="card"><div class="ic">🕐</div><h3>時間一律寫具體</h3><p>寫「14:00–16:30」，不寫「下午場」「晚上」。日期後面的星期幾要核對過，倒數計時也要用同一個時間。</p></div>
+      <div class="card"><div class="ic">💌</div><h3>好轉傳比好看重要</h3><p>報名多半是朋友轉傳來的。直式海報給 LINE、橫式給 FB，加一句可以直接貼的文案，比再多一個特效有用。</p></div>
+      <div class="card"><div class="ic">💰</div><h3>錢的事寫最清楚</h3><p>費用、早鳥截止、補助怎麼領、匯款帳號、退費規定，在票價區和常見問題各寫一次。看不懂錢的人不會報名。</p></div>
+      <div class="card"><div class="ic">🔁</div><h3>同一頁可以變回顧頁</h3><p>活動結束後不用另做一頁：把報名區換成影片、照片、歌曲和心法，學員回家還會再打開，下一場的口碑也從這裡來。</p></div>
+      <div class="card"><div class="ic">📦</div><h3>ZIP 根目錄一定要有 index.html</h3><p>首頁叫別的名字、或多包一層資料夾，上架系統就找不到首頁、整包失敗。驗證的是「最後交付的那個 ZIP」：解壓到新資料夾、用瀏覽器打開，通過才交付。</p></div>
+      <div class="card"><div class="ic">❓</div><h3>查不到就列出來，不要猜</h3><p>日期、價格、地址、講師頭銜只要有一處不確定，就照實寫並列成清單請教練確認。寫錯一個日期，比少一個特效嚴重得多。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="works">
+  <div class="wrap">
+    <div class="kicker">STEP 5 · 作品回顧</div>
+    <h2>教練做過的 17 個報名網頁</h2>
+    <p class="lead">點卡片直接開網站。每一頁下面寫的是它最值得學的地方，也對應上面的技法庫代號。</p>
+    <div class="gallery">
+      <a class="work" href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener"><img src="img/reemployment.webp" alt="女性個人 IP 打造課程網頁截圖" width="800" height="500"><div><strong>女性個人 IP × AI 主題曲</strong><span>高雄、台南兩場並排選；政府補助、轉傳海報、常見問題一應俱全。</span><i>架構範本・D</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener"><img src="img/a-to-b.webp" alt="從 A 到 B 過橋任務網頁截圖" width="800" height="500"><div><strong>從 A 到 B：過橋任務</strong><span>九關互動闖關，最上方 A→B 進度列，翻牌、搭橋、承諾一路玩到報名。</span><i>A・5</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener"><img src="img/women-reepmployment.webp" alt="婦女再就業補助網頁截圖" width="800" height="500"><div><strong>婦女再就業補助</strong><span>30 秒自測符不符合、補助分兩次發、選縣市看分署、表格範本下載。</span><i>B・C</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/champagne-salon/" target="_blank" rel="noopener"><img src="img/champagne-salon.webp" alt="香檳下午茶國際禮儀沙龍網頁截圖" width="800" height="500"><div><strong>香檳下午茶禮儀沙龍</strong><span>優雅沙龍風、精緻邀請函卡、講師與理事長介紹、匯款報名。</span><i>H・10</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener"><img src="img/bigtree-1107.webp" alt="用手機就能玩 AI 網頁截圖" width="800" height="500"><div><strong>用手機就能玩 AI（11/7）</strong><span>上一場花絮、來之前做三件事、兩張轉傳海報、常見問題。</span><i>D</i></div></a>
+      <a class="work" href="https://event.bymyway.com/ccu/" target="_blank" rel="noopener"><img src="img/ccu.webp" alt="中正大學領導力培訓網頁截圖" width="800" height="500"><div><strong>中正大學領導力培訓</strong><span>課中匿名回饋、六件卡關事票選、現場說過的話都留在這裡。</span><i>E・K</i></div></a>
+      <a class="work" href="https://coach1973.github.io/ai-art/" target="_blank" rel="noopener"><img src="img/ai-art.webp" alt="當古典音樂遇到 AI 科技網頁截圖" width="800" height="500"><div><strong>當古典音樂遇到 AI</strong><span>大字標題開場、演出陣容頭像牆、票價資訊、倒數與抽獎。</span><i>P・C</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/ema1017/" target="_blank" rel="noopener"><img src="img/ema1017.webp" alt="中華網紅協會零基礎學 AI 課網頁截圖" width="800" height="500"><div><strong>零基礎學 AI＋海鮮鍋</strong><span>白天上課、晚上餐敘，一整天時間軸，30 個名額額滿為止。</span><i>O・C</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/rebreathe/" target="_blank" rel="noopener"><img src="img/rebreathe.webp" alt="重新呼吸生命故事網頁截圖" width="800" height="500"><div><strong>重新呼吸</strong><span>電影敘事的生命故事，身體症狀與情緒對照表，最後才帶到報名。</span><i>L</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/superpower/" target="_blank" rel="noopener"><img src="img/superpower.webp" alt="吸引人才的超能力訓練網頁截圖" width="800" height="500"><div><strong>吸引人才的超能力</strong><span>簡潔留白、一句話打中痛點，Podcast 牆先建立信任。</span><i>Q</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/creator-survey/" target="_blank" rel="noopener"><img src="img/creator-survey.webp" alt="創作者卡關票選網頁截圖" width="800" height="500"><div><strong>創作者卡關票選</strong><span>講座開場現場票選、技能收集園區、匿名收穫回饋。</span><i>F・E</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/idea-center/" target="_blank" rel="noopener"><img src="img/idea-center.webp" alt="AI 好點子收集中心網頁截圖" width="800" height="500"><div><strong>AI 好點子收集中心</strong><span>一分鐘種一個點子，點子樹長在牆上，每個點子都有適合的路。</span><i>G</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/taipeiema1017/" target="_blank" rel="noopener"><img src="img/taipeiema1017.webp" alt="一支手機的魔法夜網頁截圖" width="800" height="500"><div><strong>一支手機的魔法夜</strong><span>活動結束後的回顧頁：兩首歌、兩支影片、傾聽的心法。</span><i>K</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener"><img src="img/time-secret.webp" alt="時間的秘密互動工作坊網頁截圖" width="800" height="500"><div><strong>時間的秘密</strong><span>倒數計時、三題快問快答、時間槓桿自我評分表。</span><i>C・J・5</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener"><img src="img/rpl-diy.webp" alt="傘繩 DIY 手作教室網頁截圖" width="800" height="500"><div><strong>傘繩 DIY 手作教室</strong><span>作品集可放大、方案比較卡、匯款資訊與常見問題。</span><i>I</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/111-wei/" target="_blank" rel="noopener"><img src="img/111-wei.webp" alt="蔡筱薇競選總部成立大會網頁截圖" width="800" height="500"><div><strong>有薇力 11/1 成立大會</strong><span>大日期開場、倒數、加入行事曆、地圖與分享。</span><i>M・C</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/three-lacks/" target="_blank" rel="noopener"><img src="img/three-lacks.webp" alt="全世界最優秀的團隊計畫網頁截圖" width="800" height="500"><div><strong>三缺計畫：客戶、人才、伯樂</strong><span>深色質感、會動的背景、四步入座流程、「我們不是什麼」。</span><i>N・3</i></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="wrap">
+    <div class="kicker">STEP 6 · 交付前檢查</div>
+    <h2>交付前逐項打勾</h2>
+    <ul class="check">
+      <li>課程名、日期、星期幾、時間、地點、費用、名額都核對過，時間寫具體（14:00–16:30）</li>
+      <li>立即報名按鈕在第一屏看得到，捲到哪裡都找得到（固定頂部列或手機選單）</li>
+      <li>倒數計時在活動開始、結束後顯示正確，不會變成負數</li>
+      <li>表單真的按過送出：必填、手機格式檢查有效，成功畫面寫清楚下一步</li>
+      <li>表單是 &lt;form data-works-form="網址代號"&gt;，沒有寫死其他伺服器網址或金鑰</li>
+      <li>常見問題可以展開收合，至少五題，錢和時間的問題都有回答</li>
+      <li>地圖、講師、主辦、LINE 群、分享等連結都點過，打得開</li>
+      <li>電腦版和手機版逐段量過字級，沒有小於 20px 的字（含按鈕、表單、頁尾）</li>
+      <li>不捲動、直接打開時每個區塊都看得到文字和圖，沒有大片空白</li>
+      <li>漸層、照片上的字對比夠，深底淺字、淺底深字</li>
+      <li>body 沒有 overflow-x:hidden，固定頂部列往下捲仍在</li>
+      <li>每張圖都壓成長邊 1000px、webp 品質約 72，放在 images/ 用相對路徑</li>
+      <li>沒有任何一張圖是 AI 自己生成的；出圖清單 prompts.html＋images.json 都在 ZIP 裡，總共 N 張等於實際筆數</li>
+      <li>每個出圖位置都寫成 &lt;img data-slot="IMG-編號"&gt;，編號跟清單一致，沒有「待換圖」字卡</li>
+      <li>頁尾有 TAVA AI、大樹教練、榮樹下、顧問師天團・人才軍火庫四個連結</li>
+      <li>ZIP 根目錄有全小寫、非空白的 index.html，沒有多包一層資料夾，不含帳密或金鑰</li>
+      <li>已把最後交付的 ZIP 解壓到新資料夾，用瀏覽器打開包內首頁檢查過電腦版和手機版</li>
+      <li>回報時分清楚「已通過本地驗證」和「已成功上架」，查不到的資料列成清單請教練確認</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt" id="spec" style="padding-top:56px">
+  <div class="wrap">
+    <div class="kicker">附錄 · 給 AI 讀的</div>
+    <h2>給 AI 的完整技能說明</h2>
+    <p class="lead">把這頁網址貼給任何 AI，請它讀完這一段再開工。人不用看。</p>
+    <details class="spec">
+      <summary>展開：課程推廣報名網頁技能規格</summary>
+      <h4>觸發</h4>
+      <p>使用者說「做一頁課程報名網頁」「做活動報名頁」「課程推廣網頁」「照課程推廣報名網頁流程」，並附上課程資料。資料齊全就直接開工，不必再問要不要做；缺的資料用合理暫填並在交付時列出。</p>
+      <h4>一次交付三樣（缺一不算完成）</h4>
+      <ul>
+        <li><b>index.html</b>：單一完整網頁，依上方 13 個區塊，素材放 images/。</li>
+        <li><b>prompts.html＋images.json</b>：出圖清單。開頭寫「總共 N 張」；每條欄位 id、file、section、type（實景修飾／概念／圖解背景）、ratio（16:9／4:3／4:5／1:1）、ref、prompt（英文、自成一體、無文字）、caption、alt；整份 JSON 陣列原樣放在一個 &lt;pre&gt; 裡，另存 images.json。每條可單獨複製，整份可一鍵複製。</li>
+        <li><b>ZIP</b>：根目錄 index.html（全小寫）、prompts.html、images.json、images/、原始照片；不多包資料夾、不含任何秘密。</li>
+      </ul>
+      <h4>硬規格</h4>
+      <ul>
+        <li>所有可見文字（含手機、導覽、按鈕、表單、提示、圖說、頁尾、出圖清單頁）以瀏覽器計算字級 ≥ 20px；內文約 22px。</li>
+        <li>絕不自行生成圖片（內建生圖、外部工具、委派都不行）；需要圖的位置寫 &lt;img data-slot="IMG-NNN" src="暫時圖" alt="…"&gt;，暫時圖用真實照片或清楚標示的示意圖。</li>
+        <li>表單：&lt;form data-works-form="網址代號"&gt;，一般 name 欄位、真的 submit 按鈕、前端必填與手機格式檢查、成功畫面含下一步；不寫外部 API、不放金鑰。</li>
+        <li>不做唯一靠捲動觸發的顯示；不寫延遲插入圖片的載圖程式；body 不用 overflow-x:hidden；漸層與照片上的文字確保對比。</li>
+        <li>倒數計時處理開始與結束狀態；所有日期配對正確星期；時間寫具體區間。</li>
+        <li>頁尾四連結：本網頁由 TAVA AI 製作（https://www.tava-ai.com/）／出品人 大樹教練（https://www.bymyway.com/）／友善連結 榮樹下（https://event.bymyway.com/curated/rongtree/）／顧問師天團・人才軍火庫（https://event.bymyway.com/curated/skyteam/）。</li>
+        <li>圖片壓成長邊 1000px、webp 品質約 72。</li>
+      </ul>
+      <h4>特效</h4>
+      <p>使用者點名時照技法庫做：A～Q 參考各自連結的網站，1～14 的實作數字見 https://event.bymyway.com/curated/reverse-skill/ 最下方「給 AI 的完整技能說明」。沒點名就依課程調性挑 2～3 招，不堆滿。只學做法，不搬別人網站的文字、圖片、商標。</p>
+      <h4>驗證與回報</h4>
+      <p>打包後列出 ZIP 內容、解壓到新資料夾、用瀏覽器開包內首頁，在 1440 與 390 寬檢查：圖片、導覽、倒數、表單送出、FAQ、分享、字級、無橫向捲動。失敗就修好重打包重驗。回報最後一段只寫：網頁在哪、出圖清單在哪、ZIP 在哪、要另外交給小龍蝦的參考照片；並分清「本地驗證通過」與「已上架」。</p>
+      <h4>圖片回填</h4>
+      <p>收到圖片 ZIP：只取圖片成員，跳過隱藏檔與路徑穿越；先列張數、格式、尺寸並逐張看過，依 IMG 編號對 data-slot；壓縮後放 images/，重新打包驗證，交付新版本不覆蓋舊版。對不上的列出來問，不猜。</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="links" aria-label="頁尾連結">
+      <span>本網頁由 <a href="https://www.tava-ai.com/" target="_blank" rel="noopener">TAVA AI</a> 製作</span>
+      <span>出品人 <a href="https://www.bymyway.com/" target="_blank" rel="noopener">大樹教練</a></span>
+      <span>友善連結 <a href="https://event.bymyway.com/curated/rongtree/" target="_blank" rel="noopener">榮樹下</a></span>
+      <span><a href="https://event.bymyway.com/curated/skyteam/" target="_blank" rel="noopener">顧問師天團・人才軍火庫</a></span>
+    </nav>
+    <small>課程推廣報名網頁 開工指令與製作經驗 · 2026.11</small>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".copy").forEach(btn=>{
+  btn.addEventListener("click",async()=>{
+    const text=document.getElementById(btn.dataset.target).innerText;
+    let ok=false;
+    try{await navigator.clipboard.writeText(text);ok=true}catch(e){
+      const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();
+      try{ok=document.execCommand("copy")}catch(_){}
+      ta.remove();
+    }
+    const old=btn.textContent;btn.textContent=ok?"已複製 ✓":"請手動選取複製";btn.classList.toggle("done",ok);
+    setTimeout(()=>{btn.textContent=old;btn.classList.remove("done")},2200);
+  });
+});
+</script>
+</body>
+</html>
