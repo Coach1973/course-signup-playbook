@@ -109,16 +109,13 @@ details.more summary{cursor:pointer;font-weight:700;color:var(--teal);font-size:
 @media (max-width:820px){.grid,.grid.three{grid-template-columns:1fr}}
 
 /* 作品回顧 */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.work{display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .2s,border-color .2s}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.work{display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:20px 24px;text-decoration:none;color:var(--ink);transition:transform .2s,border-color .2s}
 .work:hover{transform:translateY(-4px);border-color:var(--coral-2)}
-.work img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#eee}
-.work div{padding:16px 20px 20px}
-.work strong{display:block;font-size:23px;line-height:1.4}
+.work strong{display:block;font-size:24px;line-height:1.4;color:var(--teal);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
 .work span{display:block;font-size:20px;color:var(--ink-2);margin-top:6px}
 .work i{display:inline-block;font-style:normal;font-size:20px;color:var(--teal);font-weight:700;margin-top:8px}
-@media (max-width:980px){.gallery{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.gallery{grid-template-columns:1fr}}
+@media (max-width:820px){.gallery{grid-template-columns:1fr}}
 
 /* checklist */
 .check{list-style:none;margin:0;padding:0;background:#fff;border:2px solid var(--line);border-radius:var(--r)}
@@ -400,25 +397,25 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
   <div class="wrap">
     <div class="kicker">STEP 5 · 作品回顧</div>
     <h2>教練做過的 17 個報名網頁</h2>
-    <p class="lead">點卡片直接開網站。每一頁下面寫的是它最值得學的地方，也對應上面的技法庫代號。</p>
+    <p class="lead">點標題直接開網站。每一頁下面寫的是它最值得學的地方，也對應上面的技法庫代號。</p>
     <div class="gallery">
-      <a class="work" href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener"><img src="img/reemployment.webp" alt="女性個人 IP 打造課程網頁截圖" width="800" height="500"><div><strong>女性個人 IP × AI 主題曲</strong><span>高雄、台南兩場並排選；政府補助、轉傳海報、常見問題一應俱全。</span><i>架構範本・D</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener"><img src="img/a-to-b.webp" alt="從 A 到 B 過橋任務網頁截圖" width="800" height="500"><div><strong>從 A 到 B：過橋任務</strong><span>九關互動闖關，最上方 A→B 進度列，翻牌、搭橋、承諾一路玩到報名。</span><i>A・5</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener"><img src="img/women-reepmployment.webp" alt="婦女再就業補助網頁截圖" width="800" height="500"><div><strong>婦女再就業補助</strong><span>30 秒自測符不符合、補助分兩次發、選縣市看分署、表格範本下載。</span><i>B・C</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/champagne-salon/" target="_blank" rel="noopener"><img src="img/champagne-salon.webp" alt="香檳下午茶國際禮儀沙龍網頁截圖" width="800" height="500"><div><strong>香檳下午茶禮儀沙龍</strong><span>優雅沙龍風、精緻邀請函卡、講師與理事長介紹、匯款報名。</span><i>H・10</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener"><img src="img/bigtree-1107.webp" alt="用手機就能玩 AI 網頁截圖" width="800" height="500"><div><strong>用手機就能玩 AI（11/7）</strong><span>上一場花絮、來之前做三件事、兩張轉傳海報、常見問題。</span><i>D</i></div></a>
-      <a class="work" href="https://event.bymyway.com/ccu/" target="_blank" rel="noopener"><img src="img/ccu.webp" alt="中正大學領導力培訓網頁截圖" width="800" height="500"><div><strong>中正大學領導力培訓</strong><span>課中匿名回饋、六件卡關事票選、現場說過的話都留在這裡。</span><i>E・K</i></div></a>
-      <a class="work" href="https://coach1973.github.io/ai-art/" target="_blank" rel="noopener"><img src="img/ai-art.webp" alt="當古典音樂遇到 AI 科技網頁截圖" width="800" height="500"><div><strong>當古典音樂遇到 AI</strong><span>大字標題開場、演出陣容頭像牆、票價資訊、倒數與抽獎。</span><i>P・C</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/ema1017/" target="_blank" rel="noopener"><img src="img/ema1017.webp" alt="中華網紅協會零基礎學 AI 課網頁截圖" width="800" height="500"><div><strong>零基礎學 AI＋海鮮鍋</strong><span>白天上課、晚上餐敘，一整天時間軸，30 個名額額滿為止。</span><i>O・C</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/rebreathe/" target="_blank" rel="noopener"><img src="img/rebreathe.webp" alt="重新呼吸生命故事網頁截圖" width="800" height="500"><div><strong>重新呼吸</strong><span>電影敘事的生命故事，身體症狀與情緒對照表，最後才帶到報名。</span><i>L</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/superpower/" target="_blank" rel="noopener"><img src="img/superpower.webp" alt="吸引人才的超能力訓練網頁截圖" width="800" height="500"><div><strong>吸引人才的超能力</strong><span>簡潔留白、一句話打中痛點，Podcast 牆先建立信任。</span><i>Q</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/creator-survey/" target="_blank" rel="noopener"><img src="img/creator-survey.webp" alt="創作者卡關票選網頁截圖" width="800" height="500"><div><strong>創作者卡關票選</strong><span>講座開場現場票選、技能收集園區、匿名收穫回饋。</span><i>F・E</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/idea-center/" target="_blank" rel="noopener"><img src="img/idea-center.webp" alt="AI 好點子收集中心網頁截圖" width="800" height="500"><div><strong>AI 好點子收集中心</strong><span>一分鐘種一個點子，點子樹長在牆上，每個點子都有適合的路。</span><i>G</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/taipeiema1017/" target="_blank" rel="noopener"><img src="img/taipeiema1017.webp" alt="一支手機的魔法夜網頁截圖" width="800" height="500"><div><strong>一支手機的魔法夜</strong><span>活動結束後的回顧頁：兩首歌、兩支影片、傾聽的心法。</span><i>K</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener"><img src="img/time-secret.webp" alt="時間的秘密互動工作坊網頁截圖" width="800" height="500"><div><strong>時間的秘密</strong><span>倒數計時、三題快問快答、時間槓桿自我評分表。</span><i>C・J・5</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener"><img src="img/rpl-diy.webp" alt="傘繩 DIY 手作教室網頁截圖" width="800" height="500"><div><strong>傘繩 DIY 手作教室</strong><span>作品集可放大、方案比較卡、匯款資訊與常見問題。</span><i>I</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/111-wei/" target="_blank" rel="noopener"><img src="img/111-wei.webp" alt="蔡筱薇競選總部成立大會網頁截圖" width="800" height="500"><div><strong>有薇力 11/1 成立大會</strong><span>大日期開場、倒數、加入行事曆、地圖與分享。</span><i>M・C</i></div></a>
-      <a class="work" href="https://event.bymyway.com/curated/three-lacks/" target="_blank" rel="noopener"><img src="img/three-lacks.webp" alt="全世界最優秀的團隊計畫網頁截圖" width="800" height="500"><div><strong>三缺計畫：客戶、人才、伯樂</strong><span>深色質感、會動的背景、四步入座流程、「我們不是什麼」。</span><i>N・3</i></div></a>
+      <a class="work" href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener"><strong>女性個人 IP × AI 主題曲</strong><span>高雄、台南兩場並排選；政府補助、轉傳海報、常見問題一應俱全。</span><i>技法：架構範本・D　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener"><strong>從 A 到 B：過橋任務</strong><span>九關互動闖關，最上方 A→B 進度列，翻牌、搭橋、承諾一路玩到報名。</span><i>技法：A・5　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener"><strong>婦女再就業補助</strong><span>30 秒自測符不符合、補助分兩次發、選縣市看分署、表格範本下載。</span><i>技法：B・C　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/champagne-salon/" target="_blank" rel="noopener"><strong>香檳下午茶禮儀沙龍</strong><span>優雅沙龍風、精緻邀請函卡、講師與理事長介紹、匯款報名。</span><i>技法：H・10　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener"><strong>用手機就能玩 AI（11/7）</strong><span>上一場花絮、來之前做三件事、兩張轉傳海報、常見問題。</span><i>技法：D　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/ccu/" target="_blank" rel="noopener"><strong>中正大學領導力培訓</strong><span>課中匿名回饋、六件卡關事票選、現場說過的話都留在這裡。</span><i>技法：E・K　開啟網頁 →</i></a>
+      <a class="work" href="https://coach1973.github.io/ai-art/" target="_blank" rel="noopener"><strong>當古典音樂遇到 AI</strong><span>大字標題開場、演出陣容頭像牆、票價資訊、倒數與抽獎。</span><i>技法：P・C　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/ema1017/" target="_blank" rel="noopener"><strong>零基礎學 AI＋海鮮鍋</strong><span>白天上課、晚上餐敘，一整天時間軸，30 個名額額滿為止。</span><i>技法：O・C　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/rebreathe/" target="_blank" rel="noopener"><strong>重新呼吸</strong><span>電影敘事的生命故事，身體症狀與情緒對照表，最後才帶到報名。</span><i>技法：L　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/superpower/" target="_blank" rel="noopener"><strong>吸引人才的超能力</strong><span>簡潔留白、一句話打中痛點，Podcast 牆先建立信任。</span><i>技法：Q　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/creator-survey/" target="_blank" rel="noopener"><strong>創作者卡關票選</strong><span>講座開場現場票選、技能收集園區、匿名收穫回饋。</span><i>技法：F・E　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/idea-center/" target="_blank" rel="noopener"><strong>AI 好點子收集中心</strong><span>一分鐘種一個點子，點子樹長在牆上，每個點子都有適合的路。</span><i>技法：G　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/taipeiema1017/" target="_blank" rel="noopener"><strong>一支手機的魔法夜</strong><span>活動結束後的回顧頁：兩首歌、兩支影片、傾聽的心法。</span><i>技法：K　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener"><strong>時間的秘密</strong><span>倒數計時、三題快問快答、時間槓桿自我評分表。</span><i>技法：C・J・5　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener"><strong>傘繩 DIY 手作教室</strong><span>作品集可放大、方案比較卡、匯款資訊與常見問題。</span><i>技法：I　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/111-wei/" target="_blank" rel="noopener"><strong>有薇力 11/1 成立大會</strong><span>大日期開場、倒數、加入行事曆、地圖與分享。</span><i>技法：M・C　開啟網頁 →</i></a>
+      <a class="work" href="https://event.bymyway.com/curated/three-lacks/" target="_blank" rel="noopener"><strong>三缺計畫：客戶、人才、伯樂</strong><span>深色質感、會動的背景、四步入座流程、「我們不是什麼」。</span><i>技法：N・3　開啟網頁 →</i></a>
     </div>
   </div>
 </section>
