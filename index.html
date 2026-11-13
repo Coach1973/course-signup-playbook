@@ -175,7 +175,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
     <article class="prompt">
       <header><div><strong>完整版開工指令</strong><br><span>第一次用、或這堂課有特別需求時用這版</span></div><button class="copy" type="button" data-target="p1">複製指令</button></header>
 <pre id="p1">我要做一頁「課程推廣報名網頁」。請照這一頁的流程和規格做：https://coach1973.github.io/course-signup-playbook/
-這一次要一次交付三樣東西：①完整網頁 ②出圖清單（含 JSON）③ZIP 下載包。
+這一次要一次交付四樣東西：①完整網頁（含報名表單）②出圖清單（含 JSON）③EDM 直式、橫式各一張 JPG（每次都要做，不用我另外要求）④ZIP 下載包。
 
 【課程基本資料】
 ・課程名稱：<span class="fill">【例如：女性個人 IP 打造 × AI 製作網頁和主題曲】</span>
@@ -205,7 +205,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 8. 場次與票價：早鳥、原價、名額、截止日；多場次用卡片並排讓人選
 9. 地點與交通：地址、Google 地圖連結、停車或大眾運輸
 10. 常見問題：可展開收合，至少五題
-11. 轉傳區：一張直式、一張橫式海報（走出圖清單），加上分享按鈕和一句好轉傳的文案
+11. EDM 下載區：直式、橫式 EDM 各一張（JPG 預覽圖＋下載按鈕），加上分享按鈕和一句好轉傳的文案；EDM 做法見下方「EDM 規則」
 12. 報名表單：姓名、手機、Email、場次（多場才放）、同行人數、從哪裡知道這堂課、備註；送出後顯示成功畫面和下一步（匯款資訊、LINE 群）
 13. 固定頁尾
 
@@ -243,7 +243,12 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 ・新功能、主要按鈕要在第一屏就看得到，不要藏在最底下
 ・每個區塊都要有圖，不要整段只有文字
 
-【EDM 規則｜只有我要求做 EDM 時適用，一律照做】
+【EDM 規則｜每次做網頁都要做，不用我另外要求，一律照做】
+・做報名網頁和報名表單的同時，一定要做兩張 EDM：直式 1080×1920（LINE、限動）、橫式 1920×1080（FB 貼文、簡報），缺一不算完成
+・EDM 上要有：課程名、日期星期、時間、地點、費用、講師照片和名字、指向這頁網址的 QR Code、網址文字；日期要配對正確的星期幾
+・EDM 用 HTML 排版再用瀏覽器輸出成 JPG，字由排版疊上去，不叫生圖畫字；這不算「自己出圖」，但圖片素材仍只用真實照片或出圖清單的圖
+・網頁的 EDM 下載區要放兩張 EDM 的預覽圖，每張旁邊一顆「下載」按鈕（用 download 屬性），並把 og:image 換成橫式 EDM
+・網頁上的講師照片換了、日期地點改了，EDM 也要同步重做
 ・EDM 裡一定要放圖片，直式、橫式都一樣：用這次出圖清單裡的主視覺圖（沒有合適的就放我給的原始照片），不准交純文字排版的 EDM
 ・圖還沒出好的時候，EDM 先放暫時圖；圖回填之後，EDM 要用新圖重做、重新輸出，不能只換網頁
 ・EDM 成品一律輸出成 JPG 或 PDF（直式、橫式各一張 JPG；要列印或轉寄再給一份 PDF），不單獨交 HTML 或 webp
@@ -262,7 +267,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 ・【驗證對象是最後交付的 ZIP】打包後先列出 ZIP 內容，再解壓到全新資料夾，用瀏覽器開啟解壓出來的首頁，檢查電腦版與手機版的圖片、導覽、倒數、表單送出、FAQ 展開、分享按鈕，沒有破圖、缺資源或程式錯誤。任何一項沒過，修好、重新打包、重新驗證，才能交付
 ・交付時要分清楚「已通過本地解壓與瀏覽器驗證」和「已成功上架」；沒拿到上架成功的結果，不准說上架成功
 ・查不到或互相矛盾的資料（日期、價格、地址、講師頭銜），不要自己猜，最後列出來給我確認
-・最後一段只寫三件事：網頁在哪、出圖清單在哪、ZIP 在哪，再加上要我另外交給小龍蝦的參考照片</pre>
+・最後一段只寫四件事：網頁在哪、EDM（直式、橫式）在哪、出圖清單在哪、ZIP 在哪，再加上要我另外交給小龍蝦的參考照片</pre>
     </article>
 
     <article class="prompt">
@@ -278,7 +283,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 ・想用的特效：<span class="fill">【技法庫點名，或寫「你挑」】</span>
 ・這次的特別需求：<span class="fill">【沒有就寫「無」】</span>
 ・規格照技能書：最小字 20px；頁尾四個連結；一張圖都不准自己出，只寫出圖清單（prompts.html＋JSON），出圖位置寫成 &lt;img data-slot="IMG-編號"&gt;；表單寫成 &lt;form data-works-form="網址代號"&gt;；ZIP 根目錄是全小寫 index.html，交付前解壓驗證過。
-・如果要做 EDM：直式、橫式都一定要把出好的圖放進去，成品一律輸出成 JPG 或 PDF，放進 ZIP 的 edm/ 資料夾。</pre>
+・EDM 每次都要做（直式、橫式各一張），一定要放圖和 QR Code，成品一律輸出成 JPG 或 PDF，放進 ZIP 的 edm/ 資料夾，網頁裡放下載區。</pre>
     </article>
 
     <article class="prompt">
@@ -288,7 +293,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 ・先列出收到幾張、格式、尺寸，逐張看過，依 IMG 編號對回網頁的 data-slot 位置
 ・壓成長邊 1000px、webp 品質約 72 再放進 images/
 ・缺圖、多圖或對不上的，列出來問我，不要猜
-・如果有 EDM：圖回填後 EDM 也要用新圖重做（直式、橫式都要有圖），輸出成 JPG 或 PDF，自己打開看過有圖才交付
+・EDM（每次都有）：圖回填後 EDM 也要用新圖重做（直式、橫式都要有圖），輸出成 JPG 或 PDF，自己打開看過有圖才交付
 ・回填後重新打包 ZIP，解壓驗證電腦版、手機版每張圖都看得到，再交付新版本（舊版不覆蓋）</pre>
     </article>
     <p class="note">💡 網頁已經上架的話，不用回填這一步：把出圖清單網址交給小龍蝦，圖出好會照 IMG 編號直接換進線上網頁。</p>
@@ -324,7 +329,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <li><b>場次與票價</b><span>早鳥、原價、名額、截止日；多場次、多方案用卡片並排。<br><em>看範例：<a href="https://event.bymyway.com/curated/rpl-diy/" target="_blank" rel="noopener">傘繩 DIY 方案</a>、<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">高雄台南兩場</a></em></span></li>
       <li><b>地點與交通</b><span>地址、地圖連結、停車或大眾運輸。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">11/7 台南見</a></em></span></li>
       <li><b>常見問題</b><span>可展開收合，至少五題，先回答最常被問的錢、時間、要帶什麼。<br><em>看範例：<a href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener">婦女再就業補助</a></em></span></li>
-      <li><b>轉傳區</b><span>直式、橫式海報各一張，加上分享按鈕和一句好轉傳的文案。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">這兩張海報直接轉給朋友</a></em></span></li>
+      <li><b>EDM 下載區</b><span>直式、橫式 EDM 各一張（每次都要做），附下載按鈕、分享按鈕和一句好轉傳的文案。<br><em>看範例：<a href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">這兩張海報直接轉給朋友</a></em></span></li>
       <li><b>報名表單</b><span>姓名、手機、Email、場次、人數、從哪裡知道、備註；送出後顯示下一步。<br><em>看範例：<a href="https://event.bymyway.com/curated/reemployment/" target="_blank" rel="noopener">留下資料，剩下的交給我們</a></em></span></li>
       <li><b>固定頁尾</b><span>本網頁由 TAVA AI 製作、出品人 大樹教練、友善連結 榮樹下、顧問師天團・人才軍火庫。</span></li>
     </ol>
@@ -342,7 +347,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <div class="card"><h3><span class="no">A</span>互動闖關＋進度列</h3><span class="fit">適合：說明會、招募、觀念型課程</span><p>整頁變成一關一關的遊戲，最上方固定 A→B 進度列，往下滑永遠知道自己走到哪。</p><a class="src" href="https://event.bymyway.com/curated/a-to-b/" target="_blank" rel="noopener">看「從 A 到 B」→</a></div>
       <div class="card"><h3><span class="no">B</span>30 秒資格自測</h3><span class="fit">適合：補助、資格限制的課</span><p>回答 5 個是非題，馬上知道符不符合、能領多少，再引導去報名。</p><a class="src" href="https://event.bymyway.com/curated/women-reepmployment/" target="_blank" rel="noopener">看「婦女再就業補助」→</a></div>
       <div class="card"><h3><span class="no">C</span>倒數計時</h3><span class="fit">適合：有截止日、開課日的活動</span><p>開場顯示距離開課或早鳥截止還有幾天幾時；時間到自動改成「進行中／已結束」。</p><a class="src" href="https://event.bymyway.com/curated/time-secret/" target="_blank" rel="noopener">看「時間的秘密」→</a></div>
-      <div class="card"><h3><span class="no">D</span>轉傳海報</h3><span class="fit">適合：要靠口碑擴散的課</span><p>直式給 LINE、橫式給 FB，一鍵下載或分享，旁邊附一句可以直接貼的轉傳文案。</p><a class="src" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">看「用手機就能玩 AI」→</a></div>
+      <div class="card"><h3><span class="no">D</span>EDM 下載</h3><span class="fit">適合：每一頁都要有</span><p>直式給 LINE、橫式給 FB，一鍵下載或分享，旁邊附一句可以直接貼的轉傳文案。</p><a class="src" href="https://event.bymyway.com/curated/bigtree-1107/" target="_blank" rel="noopener">看「用手機就能玩 AI」→</a></div>
       <div class="card"><h3><span class="no">E</span>匿名回饋牆</h3><span class="fit">適合：課中互動、課後收心得</span><p>不用舉手、不用寫名字，學員用手機送出一句話，大螢幕即時出現。</p><a class="src" href="https://event.bymyway.com/ccu/" target="_blank" rel="noopener">看「中正大學領導力」→</a></div>
       <div class="card"><h3><span class="no">F</span>現場票選</h3><span class="fit">適合：講座開場、了解聽眾</span><p>聽眾點選自己卡在哪裡，票數即時長條圖，講師照票數調整內容。</p><a class="src" href="https://event.bymyway.com/curated/creator-survey/" target="_blank" rel="noopener">看「創作者卡關票選」→</a></div>
       <div class="card"><h3><span class="no">G</span>點子收集牆</h3><span class="fit">適合：共創、工作坊</span><p>一分鐘丟一個點子，像種樹一樣長在牆上，每個點子都有適合它的路。</p><a class="src" href="https://event.bymyway.com/curated/idea-center/" target="_blank" rel="noopener">看「AI 好點子收集中心」→</a></div>
@@ -393,6 +398,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <div class="card hot"><div class="ic">☑️</div><h3>表單一定要有真的送出鈕</h3><p>有一頁做了勾選清單卻沒有送出鈕，教練勾了 35 項只能口述。任何要人填的東西，都要有送出鈕和成功畫面，交付前自己填一次、按一次。（2026-10-24）</p></div>
       <div class="card hot"><div class="ic">👀</div><h3>重要的東西放第一屏</h3><p>新功能放在頁面中段，教練沒滑到就等於沒看到。主要按鈕、倒數、新加的功能，打開網頁不用捲就要看得到。（2026-10-24）</p></div>
       <div class="card hot"><div class="ic">🔠</div><h3>字級從第一版就做到 20px</h3><p>表單提示字、頁尾、按鈕、時間軸小標最容易漏。不要等做完才放大，一開始就用 20px 當最小字，交付前用瀏覽器量電腦版和手機版。</p></div>
+      <div class="card hot"><div class="ic">📣</div><h3>EDM 不是「有要求才做」，每次都要做</h3><p>nmda-1128 做好網頁和報名表單後，教練說「應該還要有兩張 EDM，直的一張、橫的一張可下載，就像婦女再就業、打造個人 IP 那樣」。原因是技能書把 EDM 寫成「只有我要求時適用」。現在改成：網頁、報名表單、EDM 一起交付，缺 EDM 就是沒做完。</p></div>
       <div class="card hot"><div class="ic">🖼️</div><h3>EDM 一定要放圖，直式橫式都一樣</h3><p>ai-image1202 第一版 EDM 是純文字排版，一張圖都沒有，教練說「沒有圖片也叫 EDM？」。主視覺圖要放進 EDM；圖回填後 EDM 也要用新圖重做，不能只換網頁。</p></div>
       <div class="card hot"><div class="ic">🙈</div><h3>人臉不能被蓋住：日期牌、深色漸層都不行</h3><p>網頁封面的「12.02 星期三 下午」日期牌壓在人物額頭和眼睛上；EDM 又用深色漸層把照片壓得烏漆麻黑。照片要明亮、原樣呈現，日期牌放在身體或空白區（手機版排到照片下方）。做完先自己看一眼臉有沒有被蓋，再交付。</p></div>
       <div class="card hot"><div class="ic">📄</div><h3>EDM 成品一律輸出 JPG 或 PDF</h3><p>只給 webp 或 HTML，教練拿去轉傳、列印都不方便。直式、橫式各一張 JPG，要列印轉寄再給一份 PDF，放在 ZIP 的 edm/ 資料夾。</p></div>
@@ -453,7 +459,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <li>漸層、照片上的字對比夠，深底淺字、淺底深字</li>
       <li>body 沒有 overflow-x:hidden，固定頂部列往下捲仍在</li>
       <li>人物照片上的臉完整看得到：沒有日期牌、倒數、文字、色塊或深色漸層壓在臉上（電腦版、手機版都看過）</li>
-      <li>如果有 EDM：直式、橫式都放了圖，輸出成 JPG 或 PDF，自己打開看過有圖、臉沒被蓋、地點日期是最新的</li>
+      <li>EDM 有做：直式、橫式各一張，放了圖和 QR Code（掃得到這一頁），輸出成 JPG 或 PDF，網頁有下載區，自己打開看過有圖、臉沒被蓋、地點日期星期是最新的</li>
       <li>講師區不是「即將公布」：講師是大樹教練就複製最近一頁的講師卡，資料與照片都放上去了</li>
       <li>報名表單送出後，資料真的進了報名系統（實測一筆、清掉測試資料），不是只跳成功畫面</li>
       <li>每張圖都壓成長邊 1000px、webp 品質約 72，放在 images/ 用相對路徑</li>
@@ -476,11 +482,12 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <summary>展開：課程推廣報名網頁技能規格</summary>
       <h4>觸發</h4>
       <p>使用者說「做一頁課程報名網頁」「做活動報名頁」「課程推廣網頁」「照課程推廣報名網頁流程」，並附上課程資料。資料齊全就直接開工，不必再問要不要做；缺的資料用合理暫填並在交付時列出。</p>
-      <h4>一次交付三樣（缺一不算完成）</h4>
+      <h4>一次交付四樣（缺一不算完成）</h4>
       <ul>
         <li><b>index.html</b>：單一完整網頁，依上方 13 個區塊，素材放 images/。</li>
         <li><b>prompts.html＋images.json</b>：出圖清單。開頭寫「總共 N 張」；每條欄位 id、file、section、type（實景修飾／概念／圖解背景）、ratio（16:9／4:3／4:5／1:1）、ref、prompt（英文、自成一體、無文字）、caption、alt；整份 JSON 陣列原樣放在一個 &lt;pre&gt; 裡，另存 images.json。每條可單獨複製，整份可一鍵複製。</li>
-        <li><b>ZIP</b>：根目錄 index.html（全小寫）、prompts.html、images.json、images/、原始照片；不多包資料夾、不含任何秘密。</li>
+        <li><b>EDM</b>：直式 1080×1920、橫式 1920×1080 各一張 JPG（edm-vertical.jpg、edm-horizontal.jpg），含講師照片、日期地點費用、QR Code；排版原始檔放 edm-src/。每次做網頁都要做，網頁裡有下載區。</li>
+        <li><b>ZIP</b>：根目錄 index.html（全小寫）、prompts.html、images.json、images/、edm/、原始照片；不多包資料夾、不含任何秘密。</li>
       </ul>
       <h4>硬規格</h4>
       <ul>
