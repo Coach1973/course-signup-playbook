@@ -249,6 +249,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 ・EDM 用 HTML 排版再用瀏覽器輸出成 JPG，字由排版疊上去，不叫生圖畫字；這不算「自己出圖」，但圖片素材仍只用真實照片或出圖清單的圖
 ・網頁的 EDM 下載區要放兩張 EDM 的預覽圖，每張旁邊一顆「下載」按鈕（用 download 屬性），並把 og:image 換成橫式 EDM
 ・網頁上的講師照片換了、日期地點改了，EDM 也要同步重做
+・無頭 Chrome 截圖一定要加 --virtual-time-budget=15000 --run-all-compositor-stages-before-draw，否則網路字型沒載入，會出一張沒有字的圖；講師格用 grid 時欄寬寫 minmax(0,1fr)，避免長標題把右欄擠出畫面。輸出後親眼看過兩張才算完成（不能只看檔案大小）
 ・EDM 裡一定要放圖片，直式、橫式都一樣：用這次出圖清單裡的主視覺圖（沒有合適的就放我給的原始照片），不准交純文字排版的 EDM
 ・圖還沒出好的時候，EDM 先放暫時圖；圖回填之後，EDM 要用新圖重做、重新輸出，不能只換網頁
 ・EDM 成品一律輸出成 JPG 或 PDF（直式、橫式各一張 JPG；要列印或轉寄再給一份 PDF），不單獨交 HTML 或 webp
